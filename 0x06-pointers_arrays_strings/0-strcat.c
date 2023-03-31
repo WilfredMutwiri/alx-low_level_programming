@@ -1,23 +1,30 @@
 #include "main.h"
-#include <stdio.h>
 /**
- * main - check code
+ * _strcat - concatenates two strings
+ * @dest: input value
+ * @src: input value
  *
- * Return: Always 0.
- * _strcat joins two words
- * @*src:the added word
- * @*dest: theoriginal word
+ * Return: void
  */
 char *_strcat(char *dest, char *src)
 {
-	char *src[100] = "Love";
+	int i;
+	int j;
 
-	char *dest[100] = "It is awesome";
+	i = 0;
+	while (dest[i] != '\0')
+	{
+		i++;
+	}
+	j = 0;
+	while (src[j] != '\0')
+	{
+		dest[i] = src[j];
+		i++;
+		j++;
+	}
 
-	char *ptr;
-
-	ptr = _strcat(dest, src);
-
-	_putchar("%c", ptr);
-	return (0);
+	dest[i] = '\0';
+	return (dest);
 }
+
